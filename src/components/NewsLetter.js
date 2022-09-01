@@ -1,10 +1,8 @@
-
 import React from 'react'
 import Modal from 'react-bootstrap/Modal'
+
 const NewsLetter = () => {
     const [lgShow, setLgShow] = React.useState(false);
-    const [form, setForm] = React.useState("")
-
 
     return (
         <div className="newsletter d-flex aling-items-center">
@@ -22,7 +20,7 @@ const NewsLetter = () => {
                 </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <iframe style={{ width: "100%", minHeight: "430px" }} src="https://gualtieriehijos.com/formNews.html" />
+                    <iframe style={{ width: "100%", minHeight: "430px" }} src="https://gualtieriehijos.com/formNews.html" title="newsletter"/>
                 </Modal.Body>
             </Modal>
 

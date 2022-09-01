@@ -1,9 +1,6 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import imgApp from '../../resourses/app-image.jpg'
-import tick from '../../resourses/tick.png'
 import imgTranqui from '../../resourses/eficacia-y-tranquilidad.jpg'
-import { Link } from 'react-router-dom'
 import DownloadApp from '../DownloadApp'
 import pdfUrl from '../../resourses/Manual-de-granos.pdf'
 
@@ -15,9 +12,6 @@ const HomeContent4 = props => {
         backgroundPositiony:"50%",
         backgroundSize:"cover"
     })
-    const listStyle = {
-        listStyleImage: `url(${tick})`
-    }
     
     React.useEffect(() => {
         props.width<=991 ? SetImageContainer2({}) : SetImageContainer2({
@@ -41,7 +35,7 @@ const HomeContent4 = props => {
                         <h4 className="greenblue mt-2">Nuestra experiencia y recorrido en el rubro nos permitieron agilizar nuestros procesos y responder de la mejor manera a cada una de las demandas de nuestros clientes</h4>
                         <h5 className="bold mt-3">Sabemos que el tiempo es un factor valioso y por eso trabajamos constantemente para mitigar las demoras y realizar las entregas en los plazos acordados</h5>
                         <div className="d-flex justify-content-end" >
-                            <a ><button onClick={()=>window.open(pdfUrl, '_blank')}  className= "btn green-btn btn-light mx-2  mt-5 " style={{minWidth:"130px"}} > {">"} Ver manual de granos</button></a>
+                            <button onClick={()=>window.open(pdfUrl, '_blank')}  className= "btn green-btn btn-light mx-2  mt-5 " style={{minWidth:"130px"}} > {">"} Ver manual de granos</button>
                             <button onClick={()=>window.open("https://www.instagram.com/gualtieriehijos/",'_blank')} className= "btn btn-light mx-2 mt-5 " style={{minWidth:"130px"}} > {">"} Conocé más</button>
                         </div>
                     </Col>

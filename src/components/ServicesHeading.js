@@ -1,6 +1,5 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { useLocation } from 'react-router-dom'
 
 const ServicesHeading = ({title,subtitle,classToAdd,isnew}) => {
     const containerStyle = {

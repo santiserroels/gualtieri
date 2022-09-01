@@ -12,7 +12,7 @@ const SmallCircles = ({img, text,link}) => {
     return (
         <div className="text-center" style={circleStyle}>
             <Link to={link ? "tools"+link : ""}>
-            <img style={{width:"100px"}} src={img}/>
+            <img style={{width:"100px"}} src={img} alt=""/>
             <p  style={{fontSize:"21px", textDecoration:"none",}} className="white" dangerouslySetInnerHTML={{__html:text}}></p>
             </Link>
         </div>

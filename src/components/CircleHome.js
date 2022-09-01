@@ -11,8 +11,8 @@ const CircleHome = props => {
     }
     return (
         <div className="text-center" style={circleStyle}>
-            <Link className="circle-best" to={props.link ? "tools"+props.link : ""}>
-            <img style={{width:"180px"}} src={props.img}/>
+            <Link className="circle-best" to={props.link ? "herramientas"+props.link : ""}>
+            <img style={{width:"180px"}} src={props.img} alt=""/>
             <p style={{fontSize:"21px", textDecoration:"none",}} dangerouslySetInnerHTML={{__html:props.text}}></p>
             
             </Link>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Nav, NavDropdown, Row } from 'react-bootstrap'
+import { NavDropdown, Row } from 'react-bootstrap'
 import { Link, useLocation } from 'react-router-dom'
 import "./header.css"
 import logo from '../resourses/logo-white.png'
@@ -9,16 +9,6 @@ import { HashLink } from 'react-router-hash-link';
 
 const Header = ({ cardHandler }) => {
 
-    const logoContainer = {
-        marginRight: "auto"
-    }
-    const buttonStyle = {
-        backgroundColor: "trasnparent",
-        border: "#8f8b0c solid 2px",
-        fontSize: "19px",
-        borderRadius: "0px",
-        fontWeight: "bold"
-    }
     React.useEffect(() => {
         //add arrows 
         const arrows = Array.from(document.getElementsByClassName("arrow-menu"))
@@ -103,7 +93,11 @@ const Header = ({ cardHandler }) => {
                     })
                     servicesExpanded = false
                 }
+                
+                break;
 
+            default:
+                break;
         }
     }
     return (
@@ -112,7 +106,7 @@ const Header = ({ cardHandler }) => {
 
             <Row className="header mx-sm-0 mx-md-5 mx-0 pb-3 py-3" id="header" >
 
-                <Link to="/" className="logo" href="#" ><img style={window.innerWidth > 860 ? { width: "auto", height: "90px" }:{ width: "auto", height: "80px" }} src={window.innerWidth > 860 ? logo : logoGold} /></Link>
+                <Link to="/" className="logo" href="#" ><img style={window.innerWidth > 860 ? { width: "auto", height: "90px" }:{ width: "auto", height: "80px" }} src={window.innerWidth > 860 ? logo : logoGold} alt=""/></Link>
                 <nav className="nav-bar " id="nav-bar">
                     <ul className="nav-list">
                         <li><Link className="a-to-sub" to="/">INICIO</Link></li>
@@ -120,23 +114,23 @@ const Header = ({ cardHandler }) => {
                             <NavDropdown className="nav-item a-to-sub navDrop p-0" title="SERVICIOS" id="nav-dropdown">
 
 
-                                <NavDropdown.Item><Link className="a-to-sub" to="/services/embarques">Servicio de Embarque</Link></NavDropdown.Item>
+                                <NavDropdown.Item><Link className="a-to-sub" to="/servicios/embarques">Servicio de Embarque</Link></NavDropdown.Item>
 
 
-                                <NavDropdown.Item> <Link className="a-to-sub" to="/services/entregas">Servicio de Entregas</Link></NavDropdown.Item>
+                                <NavDropdown.Item> <Link className="a-to-sub" to="/servicios/entregas">Servicio de Entregas</Link></NavDropdown.Item>
 
 
-                                <NavDropdown.Item> <a className="a-to-sub" onClick={() => window.open("https://play.google.com/store/apps/details?id=com.cerealnet.android&hl=es_419&gl=US", "_blank")} >Funcionalidades de Cerealnet</a></NavDropdown.Item>
+                                <div className="dropdown-item"><a className="a-to-sub" href="https://play.google.com/store/apps/details?id=com.cerealnet.android" target="_blank" rel="noreferrer">Funcionalidades de Cerealnet</a></div>
 
 
                             </NavDropdown>
                         </li>
-                        <li><Link className="a-to-sub" to="/us">NOSOTROS</Link></li>
-                        <li><Link className="a-to-sub " to="/news">NOVEDADES</Link></li>
+                        <li><Link className="a-to-sub" to="/nosotros">NOSOTROS</Link></li>
+                        {/* <li><Link className="a-to-sub " to="/news">NOVEDADES</Link></li> */}
                         <li><NavDropdown className="nav-item a-to-sub navDrop p-0" title="LINKS DE INTERES" id="nav-dropdown">
-                            <NavDropdown.Item  eventKey="4.1"  ><a className=" a-to-sub"  onClick={() => window.open("http://www.fundacionfada.org")}>www.fundacionfada.org</a></NavDropdown.Item>
-                            <NavDropdown.Item  eventKey="4.1"  ><a className=" a-to-sub"  onClick={() => window.open("https://bcr.com.ar/es")}>www.bcr.com.ar</a></NavDropdown.Item>
-                            <NavDropdown.Item eventKey="4.1"  ><a className=" a-to-sub"  onClick={() => window.open("https://bolsadecereales.com/")}>www.bolsadecereales.com</a></NavDropdown.Item>
+                            <div className="dropdown-item"><a className="a-to-sub" href="http://www.fundacionfada.org">www.fundacionfada.org</a></div>
+                            <div className="dropdown-item"><a className="a-to-sub" href="https://bcr.com.ar/es">www.bcr.com.ar</a></div>
+                            <div className="dropdown-item"><a className="a-to-sub" href="https://bolsadecereales.com/">www.bolsadecereales.com</a></div>
 
                         </NavDropdown></li>
                         <li><HashLink className="a-to-sub" smooth to="/#contact">CONTACTO</HashLink></li>
@@ -150,24 +144,23 @@ const Header = ({ cardHandler }) => {
                 </div>
                 <nav id="menu-nav" className="menu-nav">
                     <ul className="menu-list  px-0">
-                        <li><HashLink onClick={menuHambHandler} onClick={menuHambHandler} smooth to="/#homeContainer">INICIO</HashLink></li>
-                        <li className="black drop-down-mine drop-control"><span onClick={(e) => dropControl(e, 'services')}>SERVICIOS <img className="arrow-menu-no" src={arrowDown} /> </span><ul className="nav-item drop-father-services  p-0" title="" id="nav-dropdown drop-">
-                            <li><Link onClick={menuHambHandler}  to="/services/embarques">
+                        <li><HashLink onClick={menuHambHandler} smooth to="/#homeContainer">INICIO</HashLink></li>
+                        <li className="black drop-down-mine drop-control"><span onClick={(e) => dropControl(e, 'services')}>SERVICIOS <img className="arrow-menu-no" src={arrowDown} alt=""/> </span><ul className="nav-item drop-father-services  p-0" title="" id="nav-dropdown drop-">
+                            <li><Link onClick={menuHambHandler}  to="/servicios/embarques">
                                 Servicio de Embarque
                             </Link></li>
-                            <li><Link onClick={menuHambHandler} to="/services/entregas">
+                            <li><Link onClick={menuHambHandler} to="/servicios/entregas">
                                 Servicio de Entregas
                             </Link></li>
-                            <li><a onClick={() => window.open("https://play.google.com/store/apps/details?id=com.cerealnet.android&hl=es_419&gl=US", "_blank")} >Funcionalidades de Cerealnet</a>
-                            </li>
+                            <li><a className="a-to-sub" href="https://play.google.com/store/apps/details?id=com.cerealnet.android" target="_blank" rel="noreferrer">Funcionalidades de Cerealnet</a></li>
                         </ul>
                         </li>
-                        <li><Link onClick={menuHambHandler} to="/us">NOSOTROS</Link></li>
-                        <li><Link onClick={menuHambHandler} to="/news">NOVEDADES</Link></li>
-                        <li className="black drop-down-mine drop-control"><span onClick={(e) => dropControl(e, 'links')}>LINKS DE INTERES <img className="arrow-menu-no" src={arrowDown} /></span> <ul className="nav-item drop-father-links  p-0" title="" id="nav-dropdown">
-                            <li className="noneline" ><a onClick={() => window.open("http://www.fundacionfada.org")}>www.fundacionfada.org</a></li>
-                            <li className="noneline" ><a onClick={() => window.open("https://bcr.com.ar/es")}>www.bcr.com.ar</a></li>
-                            <li className="noneline no-border" ><a onClick={() => window.open("https://bolsadecereales.com/")}>www.bolsadecereales.com</a></li>
+                        <li><Link onClick={menuHambHandler} to="/nosotros">NOSOTROS</Link></li>
+                        {/* <li><Link onClick={menuHambHandler} to="/news">NOVEDADES</Link></li> */}
+                        <li className="black drop-down-mine drop-control"><span onClick={(e) => dropControl(e, 'links')}>LINKS DE INTERES <img className="arrow-menu-no" src={arrowDown} alt=""/></span> <ul className="nav-item drop-father-links  p-0" title="" id="nav-dropdown">
+                            <li className="noneline" ><a className="a-to-sub" href="http://www.fundacionfada.org">www.fundacionfada.org</a></li>
+                            <li className="noneline" ><a className="a-to-sub" href="https://bcr.com.ar/es">www.bcr.com.ar</a></li>
+                            <li className="noneline no-border" ><a className="a-to-sub" href="https://bolsadecereales.com/">www.bolsadecereales.com</a></li>
                         </ul></li>
                         <li><HashLink onClick={menuHambHandler} smooth to="/#contact">CONTACTO</HashLink></li>
                     </ul>

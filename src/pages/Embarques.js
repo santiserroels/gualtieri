@@ -1,14 +1,7 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-import DownloadApp from '../components/DownloadApp'
-import Octogonos from '../components/Octogonos'
 import tick from '../resourses/tickbig.png'
 import ServicesHeading from '../components/ServicesHeading'
-import agro from '../resourses/imgAgro.png'
-import bote from '../resourses/imgBote.png'
-import boteAway from '../resourses/imgBoteAway.png'
-import grass from '../resourses/imgGrass.png'
 import DividerIcon from '../components/DividerIcon'
 import PreFooter from '../components/PreFooter'
 
@@ -42,11 +35,11 @@ const Embarques = props => {
                     <Row style={{ backgroundColor: 'whitesmoke', width: "100%" }}>
                         <Col lg={2}></Col>
                         <Col md={12} lg={4} className="d-flex f-column my-5 pl-5 align-items-center">
-                            <img src={tick} className="" style={{ objectFit: "contain", width: "25px" }} />
+                            <img src={tick} className="" style={{ objectFit: "contain", width: "25px" }} alt=""/>
                             <p className=" ml-2 mt-1 mb-0 big2">Representación en ventas FOB.</p>
                         </Col>
                         <Col md={12} lg={4} className="d-flex f-column my-5 pl-5 align-items-center">
-                            <img src={tick} style={{ objectFit: "contain", width: "25px" }} />
+                            <img src={tick} style={{ objectFit: "contain", width: "25px" }} alt=""/>
                             <p className=" ml-2 mt-1 mb-0 big2"> Servicio de coordinación de cereales, oleaginosas y subproductos.</p>
                         </Col>
                         <Col lg={2}></Col>

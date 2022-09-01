@@ -1,6 +1,4 @@
 import React from 'react'
-import iconLuvias from "../resourses/lluvias.png"
-
 
 const ClimaCard = ({ data }) => {
     const dateSplit = data.date.split("-")
@@ -27,6 +25,8 @@ const ClimaCard = ({ data }) => {
             break;
         case 6:
             day = "Sabado"
+            break;
+        default:
             break;
     }
     return (

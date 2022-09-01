@@ -1,12 +1,10 @@
 import React from 'react'
-import CircleHome from './CircleHome'
 import iconBoat from '../resourses/embarques.png'
 import iconG from '../resourses/servicios0.png'
 import iconMion from '../resourses/entregascamiones.png'
 import iconCall from '../resourses/servicios2.png'
 import iconBuilding from '../resourses/somos.png'
 import iconUbication from '../resourses/puertosterminales.png'
-import arrowRight from '../resourses/arrow-right.png'
 import { Container, Row, Col } from 'react-bootstrap'
 import SmallCircles from './SmallCircles'
 const CirclesHome = () => {
@@ -21,8 +19,8 @@ const CirclesHome = () => {
             
 
                 <Row>
-                    <Col><SmallCircles link="/distanciaEP" img={iconBoat} text={"Distancia entre puertos"} /></Col>
-                    <Col><SmallCircles link="/zonaDeServ" img={iconUbication} text={"Zona de servicios"} /></Col>
+                    <Col><SmallCircles link="/distancia-entre-puertos" img={iconBoat} text={"Distancia entre puertos"} /></Col>
+                    <Col><SmallCircles link="/zona-de-servicios" img={iconUbication} text={"Zona de servicios"} /></Col>
                 </Row>
                 <Row>
                     <Col><SmallCircles link="/tipo-de-camiones" img={iconMion} text={"Tipo de camiones"} /></Col>
@@ -30,7 +28,7 @@ const CirclesHome = () => {
                 </Row>
                 <Row>
                     <Col><SmallCircles img={iconCall} text={"Consultas sobre <br/> calidades y mermas"}  /></Col>
-                    <Col><SmallCircles link="/ServDeAcondicionamiento" img={iconBuilding} text={"Costo de servicios <br/> de acondicionamiento"}  /></Col>
+                    <Col><SmallCircles link="/servicio-de-acondicionamiento" img={iconBuilding} text={"Costo de servicios <br/> de acondicionamiento"}  /></Col>
                 </Row>
                 <Row>
                     <Col><SmallCircles img={iconG} text={"Normas de comercialización"}  /></Col>

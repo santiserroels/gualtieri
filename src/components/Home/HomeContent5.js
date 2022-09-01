@@ -1,11 +1,9 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import DividerWtitle from '../DividerWTittle'
 import iconWeb from '../../resourses/web.png'
 import iconPhone from '../../resourses/phone.png'
 import iconLocation from '../../resourses/location.png'
 import iconMail from '../../resourses/mail.png'
-import { Link } from 'react-router-dom'
 import FormHome from '../Form'
 
 const HomeContent5 = () => {
@@ -19,29 +17,29 @@ const HomeContent5 = () => {
                         <Row className="p-3">
                             <Col className="py-2" lg={6} md={12}>
                                 <div className="d-flex align-items-center px-1">
-                                    <img src={iconLocation} style={{ objectFit: "contain" }} />
-                                    <a target="_blank" href="https://goo.gl/maps/8HibgknNRgae4ocy9" className="greenblue big ml-2"> H. Yrigoyen 1184, CP 2000 San Lorenzo, Santa Fe </a>
+                                    <img src={iconLocation} style={{ objectFit: "contain" }} alt=""/>
+                                    <a target="_blank" href="https://goo.gl/maps/8HibgknNRgae4ocy9" className="greenblue big ml-2" rel="noreferrer"> H. Yrigoyen 1184, CP 2000 San Lorenzo, Santa Fe </a>
                                 </div>
                             </Col>
                             <Col className="py-2" lg={6} md={12}>
                                 <div className="d-flex align-items-center px-1 mt-4">
-                                    <img src={iconPhone} style={{ objectFit: "contain" }} />
-                                    <a target="_blank" href="tel:+5403476428100" className="greenblue big ml-2"> Tel: 03476 428 100  </a>
+                                    <img src={iconPhone} style={{ objectFit: "contain" }} alt=""/>
+                                    <a target="_blank" href="tel:+5403476428100" className="greenblue big ml-2" rel="noreferrer"> Tel: 03476 428 100  </a>
                                 </div>
                             </Col>
                             <Col className="py-2" lg={6} md={12}>
                                 <div className="d-flex align-items-center px-1">
-                                    <img src={iconMail} style={{ objectFit: "contain" }} />
+                                    <img src={iconMail} style={{ objectFit: "contain" }} alt=""/>
                                     <div className="d-flex flex-column emails">
-                                        <a target="_blank" href="mailto:entregas@gualtieriehijos.com.ar" className="greenblue big ml-2">entregas@gualtieriehijos.com.ar</a>
-                                        <a target="_blank" href="mailto:embarques@gualtieriehijos.com.ar" className="greenblue big ml-2">embarques@gualtieriehijos.com.ar</a>
+                                        <a target="_blank" href="mailto:entregas@gualtieriehijos.com.ar" className="greenblue big ml-2" rel="noreferrer">entregas@gualtieriehijos.com.ar</a>
+                                        <a target="_blank" href="mailto:embarques@gualtieriehijos.com.ar" className="greenblue big ml-2" rel="noreferrer">embarques@gualtieriehijos.com.ar</a>
                                     </div>
                                 </div>
                             </Col>
                             <Col className="py-2" lg={6} md={12}>
                                 <div className="d-flex align-items-center px-1 mt-4">
-                                    <img src={iconWeb} style={{ objectFit: "contain" }} />
-                                    <a target="_blank" href="https://goo.gl/maps/8HibgknNRgae4ocy9" className="greenblue big ml-2"> gualtieriehijos.com.ar </a>
+                                    <img src={iconWeb} style={{ objectFit: "contain" }} alt=""/>
+                                    <a target="_blank" href="https://goo.gl/maps/8HibgknNRgae4ocy9" className="greenblue big ml-2" rel="noreferrer"> gualtieriehijos.com.ar </a>
                                 </div>
                             </Col>
                         </Row>
@@ -57,6 +55,7 @@ const HomeContent5 = () => {
                             allowFullScreen=""
                             aria-hidden="false"
                             tabIndex="0"
+                            title="google_maps"
                         />
                     </Col>
                     <Col md={6} className="">

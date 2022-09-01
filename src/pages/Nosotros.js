@@ -1,15 +1,10 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 import DividerIcon from '../components/DividerIcon'
 import DownloadApp from '../components/DownloadApp'
 import Octogonos from '../components/Octogonos'
 import PreFooter from '../components/PreFooter'
 import ServicesHeading from '../components/ServicesHeading'
-import agro from '../resourses/imgAgro.png'
-import bote from '../resourses/imgBote.png'
-import boteAway from '../resourses/imgBoteAway.png'
-import grass from '../resourses/imgGrass.png'
 import tick from '../resourses/tickbig.png'
 
 const Nosotros = props => {
@@ -40,7 +35,7 @@ const Nosotros = props => {
                     </Col>
                     <div style={{backgroundColor: 'whitesmoke',width: '100%'}}>
                         <Col className="px-5 pt-5 pb-4 d-flex"  md={12}>
-                                <img src={tick} style={{objectFit:"contain",width:"25px"}} />
+                                <img src={tick} style={{objectFit:"contain",width:"25px"}} alt=""/>
                                 <p className=" ml-2 mt-1 mb-0 big2"> Contamos con tecnología propia y un gran equipo atento a cualquier imprevisto, garantizando el servicio en los tiempos previstos.</p>
                         </Col>
                     </div>

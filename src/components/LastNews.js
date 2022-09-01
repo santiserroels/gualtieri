@@ -1,14 +1,12 @@
 import React from 'react'
 import { Container, Row,Col } from 'react-bootstrap'
-import DividerWtitle from './DividerWTittle'
 import DF from '../data-fetcher/getPosts'
 import CuadradoEntrada from './CuadradoEntrada'
 import loading from '../resourses/loading.svg'
-import { Link } from 'react-router-dom'
 
 
 const LastNews = (props) => {
-    const charging = <img style={{ width: "70x" }} src={loading} />
+    const charging = <img style={{ width: "70x" }} src={loading} alt=""/>
     const [entradas, setEntradas] = React.useState(charging)
     const generateEntradas = (data) => {
         let preLast=true

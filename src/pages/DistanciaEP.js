@@ -1,7 +1,4 @@
 import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-import tick from '../resourses/tickbig.png'
 import ServicesHeading from '../components/ServicesHeading'
 
 import DividerIcon from '../components/DividerIcon'

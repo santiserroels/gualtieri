@@ -41,17 +41,7 @@ const CardAnimatedHome = ({cardHandler}) => {
         maxWidth: "1220px",
 
     }
-    const circleStyle ={
-        borderRadius:"250px",
-        display:"flex",
-        alingItems:"center",
-        flexDirection:"column",
-        maxWidth:"180px"
-    }
     
-
-    
-
     return (
         <div className="container-card-home-open pr-md-5" id="container-card-home" style={CardContainerStyle}>
             <Container className="" style={containerFix}>
@@ -63,17 +53,17 @@ const CardAnimatedHome = ({cardHandler}) => {
                             <h3 className="greenblue m-0 ">{">"} Somos la mejor opción para acopiadores, exportadores y cooperativas.</h3></div> : <div className="title-container-home"><h2 className="bold">Innovación.<br/> Calidad.<br/> Profesionalismo.</h2>
                             <h3 className="greenblue m-0 ">{">"} Somos la mejor opción para<br/> acopiadores, exportadores<br/> y cooperativas.</h3></div>}
                             <div className="d-flex" style={{ justifyContent: "space-between" }}>
-                                <CircleHome link="/distanciaEP" img={iconBoat} text={"Distancia entre puertos"} />
-                                <CircleHome link="/zonaDeServ" img={iconUbication} text={"Zona de servicios"} />
+                                <CircleHome link="/distancia-entre-puertos" img={iconBoat} text={"Distancia entre puertos"} />
+                                <CircleHome link="/zona-de-servicios" img={iconUbication} text={"Zona de servicios"} />
                                 <CircleHome link="/tipo-de-camiones" img={iconMion} text={"Tipo de camiones"} />
                                 <CircleHomeHref link="https://www.cac.bcr.com.ar/es/arbitraje-y-calidad/liquidacion-y-mermas/liquidacion-de-mercaderia-0" img={iconCall} text={"Consultas sobre <br/> calidades y mermas"} target={"_blank"}/>
-                                <CircleHome link="/ServDeAcondicionamiento" img={iconBuilding} text={"Costo de servicios <br/> de acondicionamiento"} />
+                                <CircleHome link="/servicio-de-acondicionamiento" img={iconBuilding} text={"Costo de servicios <br/> de acondicionamiento"} />
                                 <CircleHomeHref link="https://www.cac.bcr.com.ar/es/arbitraje-y-calidad/normas-de-comercializacion" img={iconG} text={"Normas de comercialización"} target={"_blank"}/>  
                             </div>
 
             </div>
                         <div onClick={(e) => cardHandler(e)} style={arrowStyle}>
-                            <img className="arrow-left" src={arrowRight} />
+                            <img className="arrow-left" src={arrowRight} alt=""/>
                         </div>
                     </Col>
                 </Row>

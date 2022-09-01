@@ -81,13 +81,6 @@ const HomeContent2 = props => {
                         </Row> )
         }
     }
-    const customStyles = {
-
-        control: () => ({
-          // none of react-select's styles are passed to <Control />
-          width: 200,
-        }),
-      }
 
     return (
         <div>
@@ -97,8 +90,8 @@ const HomeContent2 = props => {
             </Container>
             <Container className="text-right d-flex flex-column">
 
-                {clima2 != "" ? climaPrint() :
-                <Row className="d-flex justify-content-center"><img style={{ width: "45px" }} src={loading} /></Row>
+                {clima2 !== "" ? climaPrint() :
+                <Row className="d-flex justify-content-center"><img style={{ width: "45px" }} src={loading} alt=""/></Row>
                     }
                     <p className="small mt-2">Copiright:{clima2.copyright}</p>
             </Container>

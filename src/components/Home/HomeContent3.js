@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 
 const HomeContent3 = (props) => {
-    const charging = <img style={{ width: "70x" }} src={loading} />
+    const charging = <img style={{ width: "70x" }} src={loading} alt="" />
     const [entradas, setEntradas] = React.useState(charging)
     const generateEntradas = (data) => {
         let preLast=true
@@ -30,7 +30,7 @@ const HomeContent3 = (props) => {
             getPosts()
         }
 
-    },[] )
+    },[entradas, charging, getPosts] )
     return (
         <div>
             <Container className="mt-5">

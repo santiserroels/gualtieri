@@ -19,7 +19,7 @@ const New = (props) => {
             <ServicesHeading classToAdd="new" isnew subtitle={" Cargando..."} title={"..."} />
             <DividerIcon />
             <div className="d-flex justify-content-center mt-5">
-                <img style={{ width: "160px" }} src={loading} />
+                <img style={{ width: "160px" }} src={loading} alt=""/>
             </div>
         </div>
     let date
@@ -28,41 +28,28 @@ const New = (props) => {
         switch (month) {
             case 0:
                 return "Ene"
-                break;
             case 1:
                 return "Feb"
-                break;
             case 2:
                 return "Mar"
-                break;
             case 3:
                 return "Abr"
-                break;
             case 4:
                 return "May"
-                break;
             case 5:
                 return "Jun"
-                break;
             case 6:
                 return "jul"
-                break;
             case 7:
                 return "Ago"
-                break;
             case 8:
                 return "Sep"
-                break;
             case 9:
                 return "Oct"
-                break;
             case 10:
                 return "Nov"
-                break;
             case 11:
                 return "Dic"
-                break;
-
             default:
                 break;
         }
@@ -93,17 +80,17 @@ const New = (props) => {
                 <Container>
                     <Row className="d-flex justify-content-center mt-5">
                         <Col md={12}  className="d-flex flex-column align-items-center justify-content-center">
-                            {post.better_featured_image != null ? <img style={{width:"max-content",maxHeight:"400px",maxWidth:"100%",objectFit:"cover"}} src={selectBetterImg(post.better_featured_image.media_details.sizes) } /> : "" }
+                            {post.better_featured_image != null ? <img style={{width:"max-content",maxHeight:"400px",maxWidth:"100%",objectFit:"cover"}} src={selectBetterImg(post.better_featured_image.media_details.sizes) } alt=""/> : "" }
                             <div className="divier-gold"></div>
                             <h4 className="gold" style={{marginLeft:"auto"}}>{`${date.getUTCDate()} ${getMonth()} ${date.getFullYear()}`}</h4>
                             <div className="mt-4 new-content" dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>  
                         </Col>
                         <Col className="d-flex social-media-container" md={12}>
                             <div>
-                                <a href="https://www.facebook.com/gualtieriehijossrl" target="_blank"> <img src={facebook}  /> </a>
-                                <a href="https://www.instagram.com/gualtieriehijos/" target="_blank"> <img src={linkedin}  /> </a>
-                                <a href="https://twitter.com/gualtieriehijos?lang=es" target="_blank"> <img src={twitter}  /> </a>
-                                <a href="https://www.linkedin.com/company/gualtieri-e-hijos/?originalSubdomain=ar" target="_blank"> <img src={instagram}  /> </a>
+                                <a href="https://www.facebook.com/gualtieriehijossrl" target="_blank" rel="noreferrer"> <img src={facebook}  alt=""/> </a>
+                                <a href="https://www.instagram.com/gualtieriehijos/" target="_blank" rel="noreferrer"> <img src={linkedin}  alt=""/> </a>
+                                <a href="https://twitter.com/gualtieriehijos?lang=es" target="_blank" rel="noreferrer"> <img src={twitter}  alt=""/> </a>
+                                <a href="https://www.linkedin.com/company/gualtieri-e-hijos/?originalSubdomain=ar" target="_blank" rel="noreferrer"> <img src={instagram}  alt=""/> </a>
                             </div>
                             
                         </Col>
@@ -118,7 +105,7 @@ const New = (props) => {
     React.useEffect(() => {
         window.scrollTo(0,0)
         getPost()
-    },[new_id])
+    },[new_id, getPost])
     return (
         <div>
             {post}

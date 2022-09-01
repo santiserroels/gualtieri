@@ -6,11 +6,10 @@ import ServicesHeading from '../components/ServicesHeading'
 import loading from '../resourses/loading.svg'
 import DFPosts from '../data-fetcher/getPosts'
 import CuadradoEntrada from '../components/CuadradoEntrada'
-import { Link } from 'react-router-dom'
 import DividerWtitle from '../components/DividerWTittle'
 
 const Novedades = (props) => {
-    const charging = <img style={{ width: "70x" }} src={loading} />
+    const charging = <img style={{ width: "70x" }} src={loading} alt=""/>
     const [categories, setCategories] = React.useState("")
     const [entradas, setEntradas] = React.useState(charging)
     const [currentEntradas, setCurrentEntradas] = React.useState("")
@@ -51,7 +50,7 @@ const Novedades = (props) => {
         window.scrollTo(0, 0)
         return () => {
         }
-    }, [])
+    }, [getPosts])
     React.useEffect(() => {
         avaliablePages >= pagination ? setStyleButton({display:"flex"}) : setStyleButton({display:"none"})
     }, [pagination,avaliablePages])
@@ -83,7 +82,7 @@ const Novedades = (props) => {
     const addPosts = async () => {
         setpagination(pagination+1)
         if (pagination < avaliablePages){
-            if(currentCat != "all" ){
+            if(currentCat !== "all" ){
             
                 const data = await DFPosts.postsByCat(currentCat, pagination)
                 let entradasCopy = [...currentEntradas]
@@ -105,7 +104,7 @@ const Novedades = (props) => {
             <DividerIcon />
             <Container style={{ borderBottom: "solid 1px #8f8b0c" }} className="d-flex my-4 pb-4 ">
                 <h2 className="gold">Noticias del Agro</h2>
-                <Select style={{ marginLeft: "auto" }} options={categories} onChange={(e) => { setPostsByCat(e) }} placeholder="Categorías" className="d-flex select-search" style={{ width: "200px" }} />
+                <Select style={{ marginLeft: "auto", width: "200px" }} options={categories} onChange={(e) => { setPostsByCat(e) }} placeholder="Categorías" className="d-flex select-search" />
             </Container>
             <Container>
                 <Row className="d-flex justify-content-center">

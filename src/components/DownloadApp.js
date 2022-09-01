@@ -1,6 +1,5 @@
-
 import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 import imgApp from '../resourses/app-image.jpg'
 import tick from '../resourses/tick.png'
 

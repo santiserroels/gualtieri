@@ -1,7 +1,6 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import globals from '../globalVar'
 import logo from '../resourses/logo.png'
 
 const CuadradoEntrada = ({ width, entrada, left }) => {
@@ -17,40 +16,28 @@ const CuadradoEntrada = ({ width, entrada, left }) => {
         switch (month) {
             case 0:
                 return "Ene"
-                break;
             case 1:
                 return "Feb"
-                break;
             case 2:
                 return "Mar"
-                break;
             case 3:
                 return "Abr"
-                break;
             case 4:
                 return "May"
-                break;
             case 5:
                 return "Jun"
-                break;
             case 6:
                 return "jul"
-                break;
             case 7:
                 return "Ago"
-                break;
             case 8:
                 return "Sep"
-                break;
             case 9:
                 return "Oct"
-                break;
             case 10:
                 return "Nov"
-                break;
             case 11:
                 return "Dic"
-                break;
 
             default:
                 break;
@@ -96,7 +83,7 @@ const CuadradoEntrada = ({ width, entrada, left }) => {
                             <h5 className="gray text-overflow pl-2" dangerouslySetInnerHTML={{ __html: trymTo(entrada.excerpt.rendered) }}></h5>
                         </Col>
                         <Col className="" style={{ overflow: "hidden   ",display:"flex", justifyContent:"center" }}>
-                            <img style={{ objectFit: "cover", maxHeight: "250px",position:"center" }} src={entrada.better_featured_image ? selectBetterImg(entrada.better_featured_image.media_details.sizes) : logo}   />
+                            <img style={{ objectFit: "cover", maxHeight: "250px",position:"center" }} src={entrada.better_featured_image ? selectBetterImg(entrada.better_featured_image.media_details.sizes) : logo}   alt=""/>
                         </Col>
 
                     </Row>
@@ -104,7 +91,7 @@ const CuadradoEntrada = ({ width, entrada, left }) => {
                     <Row>
 
                         <Col style={{ overflow: "hidden   ",display:"flex", justifyContent:"center" }}>
-                            <img style={{ objectFit: "cover", maxHeight: "250px",position:"center" }} src={entrada.better_featured_image ? selectBetterImg(entrada.better_featured_image.media_details.sizes) : logo}  />
+                            <img style={{ objectFit: "cover", maxHeight: "250px",position:"center" }} src={entrada.better_featured_image ? selectBetterImg(entrada.better_featured_image.media_details.sizes) : logo}  alt=""/>
                         </Col>
                         <Col className="d-flex flex-column ">
                             <div className="d-flex " style={{ height: "max-content" }}>

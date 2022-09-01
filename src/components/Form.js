@@ -1,6 +1,5 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
-import { Link } from 'react-router-dom';
 import ReCAPTCHA from "react-google-recaptcha";
 
 
@@ -23,7 +22,7 @@ export default function FormHome() {
             message: arrayFrom[4],
             reply_to: arrayFrom[1],
             }
-    if (recaptchaValue != "" && email.name.length != 0 && email.phone.length != 0 && email.about.length != 0 && email.message.length != 0){
+    if (recaptchaValue !== "" && email.name.length !== 0 && email.phone.length !== 0 && email.about.length !== 0 && email.message.length !== 0){
     
       emailjs.send('service_j9ql35v', 'template_iox6uig', email, 'user_lv4rmCysUH0l11rwicUB5')
         .then((result) => {
@@ -40,7 +39,7 @@ export default function FormHome() {
          }, 2000);
         });
     }else{
-      setMensajeAlert(<div class="alert alert-warning" role="alert">¡Vifique el ReCAPTCHA y los campos!</div>)
+      setMensajeAlert(<div class="alert alert-warning" role="alert">¡Verifique el ReCAPTCHA y los campos!</div>)
       setTimeout(() => {
         setMensajeAlert("")
      }, 2000);

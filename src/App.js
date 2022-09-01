@@ -1,14 +1,8 @@
-import logo from './logo.svg';
 import React from 'react'
 
 import './App.css';
 import Header from './components/Header';
-import { HashRouter } from 'react-router-dom';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom"; 
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Footer from './components/Footer';
 import Nosotros from './pages/Nosotros';
@@ -47,44 +41,45 @@ const App = () => {
 }
   return (
     <div className="App">
-      <HashRouter>
+      <BrowserRouter>
         <Header cardHandler={cardHandler} />
         <Switch>
-        <Route  path="/us">
-          <Nosotros width={width} />
-        </Route>
-        <Route path="/services/embarques">
-          <Embarques width={width} />
-        </Route>
-        <Route path="/services/entregas">
-          <Entregas width={width} />
-        </Route>
-        <Route path="/news">
-          <Novedades width={width} />
-        </Route>
-        <Route path="/tools/zonaDeServ">
-          <ZonaDeServ width={width} />
-        </Route>
-        <Route path="/tools/tipo-de-camiones">
-          <TipoDeCamiones width={width} />
-        </Route>
-        <Route path="/tools/ServDeAcondicionamiento">
-          <ServDeAcondicionamiento width={width} />
-        </Route>
-        <Route path="/tools/distanciaEP">
-          <DistanciaEP width={width} />
-        </Route>
-        <Route path="/new/:new_id">
-          <New  width={width} />
-        </Route>
-        <Route path="/">
-          <Home cardHandler={cardHandler} width={width} />
-        </Route>
-      
-        
+          <Route path="/nosotros">
+            <Nosotros width={width} />
+          </Route>
+          <Route path="/servicios/embarques">
+            <Embarques width={width} />
+          </Route>
+          <Route path="/servicios/entregas">
+            <Entregas width={width} />
+          </Route>
+          <Route path="/novedades" exact strict>
+            <Novedades width={width} />
+          </Route>
+          <Route path="/herramientas/zona-de-servicios">
+            <ZonaDeServ width={width} />
+          </Route>
+          <Route path="/herramientas/tipo-de-camiones">
+            <TipoDeCamiones width={width} />
+          </Route>
+          <Route path="/herramientas/servicio-de-acondicionamiento">
+            <ServDeAcondicionamiento width={width} />
+          </Route>
+          <Route path="/herramientas/distancia-entre-puertos">
+            <DistanciaEP width={width} />
+          </Route>
+          <Route path="/novedades/:new_id">
+            <New  width={width} />
+          </Route>
+          <Route path="/">
+            <Home cardHandler={cardHandler} width={width} />
+          </Route>
+          <Route path="/hola">
+            <Embarques width={width} />
+          </Route>
         </Switch>
         <Footer />
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }

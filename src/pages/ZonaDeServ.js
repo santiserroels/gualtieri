@@ -1,14 +1,6 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-import DownloadApp from '../components/DownloadApp'
-import Octogonos from '../components/Octogonos'
-import tick from '../resourses/tickbig.png'
 import ServicesHeading from '../components/ServicesHeading'
-import agro from '../resourses/imgAgro.png'
-import bote from '../resourses/imgBote.png'
-import boteAway from '../resourses/imgBoteAway.png'
-import grass from '../resourses/imgGrass.png'
 import DividerIcon from '../components/DividerIcon'
 import PreFooter from '../components/PreFooter'
 
@@ -27,7 +19,7 @@ const ZonaDeServ = props => {
             <Container className="mt-5">
                 <Row>
                     <Col>
-                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/eIpxkAKCrIQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/eIpxkAKCrIQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="video"></iframe>
                     </Col>
                 </Row>
             </Container>

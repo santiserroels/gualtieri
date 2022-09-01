@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import NewsLetter from './NewsLetter';
 
-const Footer = ({ dark }) => {
+const Footer = () => {
     return (
         <footer >
             <div className="container my-5">
                 <div className="row">
                     <div className="col-md-4 mt-5 d-flex f-column column-logo flex-column">
-                        <img src={logo}/>
+                        <img src={logo} alt=""/>
                         <p className=" mb-0 pl-5">Copyright 2021. Gualtieri e Hijos. <br />
                         Todos los derechos reservados.</p>
                     </div>
@@ -22,18 +22,18 @@ const Footer = ({ dark }) => {
                                 <Link to="/">
                                     <p className="mb-1 mr-5 pb-2">INICIO</p>
                                 </Link>
-                                <Link to="/us">
+                                <Link to="/nosotros">
                                     <p className="mb-1 mr-5 pb-2">NOSOTROS</p>
                                 </Link>
-                                <Link to="/news">
+                                {/* <Link to="/news">
                                     <p className="mb-1 mr-5 pb-2">NOVEDADES</p>
-                                </Link>
+                                </Link> */}
                             </div>
                             <div className="col-md-6 pl-4 text-md-left">
-                                <Link to="/services/embarques">
+                                <Link to="/servicios/embarques">
                                     <p className="mb-1 mr-5 pb-2">EMBARQUES</p>
                                 </Link>
-                                <Link to="/services/entregas">
+                                <Link to="/servicios/entregas">
                                     <p className="mb-1 mr-5 pb-2">ENTREGAS</p>
                                 </Link>
                                 <HashLink to="/#contact">
@@ -50,7 +50,7 @@ const Footer = ({ dark }) => {
                 </div>
             </div>
             <div className="footer-axyoma text-center">
-                <p className=" mb-0"><a className="big pb-0" href="https://axyomaglobal.com" target="_blank"> DISEÑO AXYOMAGLOBAL</a></p>
+                <p className=" mb-0"><a className="big pb-0" href="https://axyomaglobal.com" target="_blank" rel="noreferrer"> DISEÑO AXYOMAGLOBAL</a></p>
             </div>
         </footer>
     )
