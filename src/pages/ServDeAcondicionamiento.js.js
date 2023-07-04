@@ -61,7 +61,7 @@ const ServDeAcondicionamiento = props => {
                </Row>
                <Row>
                    <Col className="text-center">
-                        <h4 className="gray bold">Vigentes desde el 1 de abril y hasta el próximo aumento</h4>
+                        <h4 className="gray bold">Vigentes desde el 1 de septiembre y hasta el próximo aumento</h4>
                    </Col>
                </Row>
             </Container>
